@@ -14,6 +14,15 @@ discuz x3 on sae. rewrite the core files ,the main use is on app applying the ws
 4.安装
 
 [说明]：
+
 1.创建一个stroage 名称为discuzx
 
+模板以及data等css js缓存以及上传附件均在这里
+
 2.开启 memcache
+
+不开启可能会导致前台空白
+
+
+
+
