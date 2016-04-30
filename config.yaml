@@ -1,0 +1,17 @@
+name: discuzx
+version: 5
+handle:
+- errordoc: 403 /403.html
+- expire: if(path ~ "\.(js|css|png|gif|jpg|ico)$") time 31536000
+- rewrite: if ( path ~ "^/wiki-(.*)$") goto "/plugin.php?id=mediawiki:wiki&title=$1&%{QUERY_STRING}"
+- rewrite: if ( path ~ "^/topic-(.+)\.html$") goto "portal.php?mod=topic&topic=$1&%{QUERY_STRING}"
+- rewrite: if ( path ~ "^/article-([0-9]+)-([0-9]+)\.html$") goto "portal.php?mod=view&aid=$1&page=$2&%{QUERY_STRING}"
+- rewrite: if ( path ~ "^/forum-(\w+)-([0-9]+)\.html$") goto "forum.php?mod=forumdisplay&fid=$1&page=$2&%{QUERY_STRING}"
+- rewrite: if ( path ~ "^/thread-([0-9]+)-([0-9]+)-([0-9]+)\.html$") goto "forum.php?mod=viewthread&tid=$1&extra=page\%3D$3&page=$2&%{QUERY_STRING}"
+- rewrite: if ( path ~ "^/group-([0-9]+)-([0-9]+)\.html$") goto "forum.php?mod=forumdisplay&action=list&fid=$1&page=$2&%{QUERY_STRING}"
+- rewrite: if ( path ~ "^/blog-([0-9]+)-([0-9]+)\.html$") goto "home.php?mod=space&uid=$1&do=blog&id=$2&%{QUERY_STRING}"
+- rewrite: if ( path ~ "^/space-(username|uid)-(.+)\.html$") goto "home.php?mod=space&$1=$2&%{QUERY_STRING}"
+- rewrite: if ( path ~ "^/archiver/(.+)\.html") goto "archiver/index.php?$1&%{QUERY_STRING}"
+- rewrite: if ( path ~ "^/data/cache/(.+)\.css") goto "cssjs.php?file=$1&type=css"
+- rewrite: if ( path ~ "^/data/cache/(.+)\.js") goto "cssjs.php?file=$1&type=js"
+- rewrite: if ( path ~ "^/(\w+)-(\w+)\.html") goto "plugin.php?id=$1:$2&%{QUERY_STRING}"
