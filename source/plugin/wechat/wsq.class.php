@@ -4,7 +4,7 @@
  *      [Discuz!] (C)2001-2099 Comsenz Inc.
  *      This is NOT a freeware, use is subject to license terms
  *
- *      $Id: wsq.class.php 35124 2014-12-01 04:18:03Z anezhou $
+ *      $Id: wsq.class.php 35931 2016-05-13 03:05:05Z nemohou $
  */
 
 if (!defined('IN_DISCUZ')) {
@@ -13,8 +13,8 @@ if (!defined('IN_DISCUZ')) {
 
 class wsq {
 
-	public static $WSQ_DOMAIN = 'http://wsq.discuz.qq.com/?';
-	public static $API_URL = 'http://wsq.discuz.qq.com/?';
+	public static $WSQ_DOMAIN = 'http://wsq.discuz.com/?';
+	public static $API_URL = 'http://wsq.discuz.com/?';
 	public static $SETTING = array();
 
 	private static function _dfsockopen($get, $post = array()) {

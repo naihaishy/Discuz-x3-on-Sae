@@ -4,11 +4,11 @@
  *      [Discuz!] (C)2001-2099 Comsenz Inc.
  *      This is NOT a freeware, use is subject to license terms
  *
- *      $Id: mobile.class.php 35167 2014-12-25 02:24:21Z nemohou $
+ *      $Id: mobile.class.php 35932 2016-05-13 03:05:45Z nemohou $
  */
 
 define("MOBILE_PLUGIN_VERSION", "4");
-define("REQUEST_METHOD_DOMAIN", 'http://wsq.discuz.qq.com');
+define("REQUEST_METHOD_DOMAIN", 'http://wsq.discuz.com');
 
 class mobile_core {
 

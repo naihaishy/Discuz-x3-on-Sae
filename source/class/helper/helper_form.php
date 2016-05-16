@@ -40,7 +40,7 @@ class helper_form {
 //				}
 //			}
 			if($allowget || ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_GET['formhash']) && $_GET['formhash'] == formhash() && empty($_SERVER['HTTP_X_FLASH_VERSION']) && (empty($_SERVER['HTTP_REFERER']) ||
-				strncmp($_SERVER['HTTP_REFERER'], 'http://wsq.discuz.qq.com', 24) === 0 || strncmp($_SERVER['HTTP_REFERER'], 'http://m.wsq.qq.com', 19) === 0 ||
+				strncmp($_SERVER['HTTP_REFERER'], 'http://wsq.discuz.com/', 22) === 0 || strncmp($_SERVER['HTTP_REFERER'], 'http://m.wsq.qq.com', 19) === 0 ||
 				preg_replace("/https?:\/\/([^\:\/]+).*/i", "\\1", $_SERVER['HTTP_REFERER']) == preg_replace("/([^\:]+).*/", "\\1", $_SERVER['HTTP_HOST'])))) {
 				if(checkperm('seccode')) {
 					if($secqaacheck && !check_secqaa($_GET['secanswer'], $_GET['sechash'])) {
